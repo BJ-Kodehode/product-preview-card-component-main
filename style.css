@@ -1,23 +1,20 @@
-/* Grunnleggende stil for kortet */
 .product-card {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* To kolonner, lik bredde */
-  gap: 1.5rem; /* Avstand mellom elementene */
-  max-width: 600px; /* Maks bredde for kortet */
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 600px;
   background-color: white;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Bildeseksjonen */
 .product-image {
   grid-column: 1 / 2;
   width: 100%;
   object-fit: cover;
 }
 
-/* Innholdseksjonen */
 .product-info {
   grid-column: 2 / 3;
   display: flex;
@@ -26,7 +23,6 @@
   padding: 1.5rem;
 }
 
-/* Grid-områder for mer fleksibilitet */
 .product-card {
   grid-template-areas: "image content";
 }
@@ -37,10 +33,9 @@
   grid-area: content;
 }
 
-/* Responsivt design */
 @media (max-width: 600px) {
   .product-card {
-    grid-template-columns: 1fr; /* Én kolonne på små skjermer */
+    grid-template-columns: 1fr;
     grid-template-areas:
       "image"
       "content";
